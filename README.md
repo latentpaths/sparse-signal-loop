@@ -1,216 +1,106 @@
-## Sparse Signal Loop
+# Sparse Signal Loop
 
-Sparse Signal Loop is a research harness for evaluating LLM agents across progressive interventions on two benchmark families:
+Experiments on feedback, working memory, and reusable skills for LLM agents.
+The harness compares chat-style and RLM-style agents on LongBench-Pro and
+Mini SWE Agent Plus while varying the information and persistent artifacts
+available during a rollout.
 
-- LongBench-Pro (LBP)
-- Mini SWE Agent Plus (MSAP)
+## Experimental structure
 
-It compares chat-style and RLM-style harnesses across three phases:
+| Phase | Comparison |
+| --- | --- |
+| 0 | Baseline harness and feedback conditions |
+| 1 | Working-memory interventions |
+| 2 | Carried `SKILL.md` artifacts and chat-reinjection baselines |
 
-- Phase 0: baseline harness/feedback comparisons
-- Phase 1: working-memory interventions
-- Phase 2: self-improving skill mechanisms (`SKILL.md` and chat reinjection baselines)
+The runners retain configuration, measurements, and generated reports under
+`outputs/`. Read the [research writeup](docs/BLOG.md) for the experiments and
+their interpretation; this README describes how to operate the code.
 
-## Repository Layout
+## Installation
 
-- `src/experiments`: phase schemas, CLIs, factorial runner, summary/report generation.
-- `src/envs/longbenchpro`: LBP chat harness environment package.
-- `src/envs/longbenchpro_rlm`: LBP RLM harness environment package.
-- `src/envs/mini_swe_agent_plus`: mini-SWE chat harness environment package.
-- `src/envs/mini_swe_agent_plus_rlm`: mini-SWE RLM harness environment package.
-- `scripts`: practical wrappers for smoke runs, phase runs, full matrix runs, and Prime pod helpers.
-- `archive`: archived outputs.
+Use Python 3.11 or later and [uv](https://docs.astral.sh/uv/):
 
-## Prerequisites
-
-- Python `3.11+`
-- `uv` (the scripts can install it if missing)
-- Prime API access for real runs (`PRIME_API_KEY`)
-
-## Quickstart (Local)
-
-1) Install dependencies
-
-```bash
-uv sync
+```sh
+git clone https://github.com/stochi0/sparse-signal-loop.git
+cd sparse-signal-loop
+uv sync --locked
 ```
 
-2) Add environment variables
+The environment packages under `src/envs/` are installed as local editable
+dependencies. Real runs require Prime API access and can incur inference and
+sandbox charges.
 
-```bash
-printf "PRIME_API_KEY=%s\n" "<your_prime_api_key>" > .env
-```
+## Preview a smoke run
 
-3) Run a dry-run smoke
-
-```bash
+```sh
 ./scripts/smoke.sh --dry-run
 ```
 
-4) Run a real smoke
+This previews the three LongBench-Pro phase runs without making inference calls.
+It writes local logs under `outputs/smoke_logs/<timestamp>/`.
 
-```bash
+## Run evaluations
+
+Set `PRIME_API_KEY` in your shell or local `.env` file before a real run:
+
+```sh
+export PRIME_API_KEY="<your-prime-api-key>"
 ./scripts/smoke.sh
 ```
 
-Smoke logs are written to `outputs/smoke_logs/<timestamp>/`.
+Keep credentials out of version control. Run one phase or benchmark explicitly:
 
-## Running Experiments
-
-### Per-phase scripts
-
-LBP:
-
-```bash
+```sh
 ./scripts/phase0/lbp.sh -n 4 -r 1
 ./scripts/phase1/lbp.sh --smoke
-./scripts/phase2/lbp.sh --smoke
-```
-
-Mini-SWE:
-
-```bash
-./scripts/phase0/mini_swe.sh -n 4 -r 1
-./scripts/phase1/mini_swe.sh --smoke
 ./scripts/phase2/mini_swe.sh --smoke
 ```
 
-### Full matrix run
+Use `--dry-run` to preview those commands. `./scripts/big_run.sh` launches the
+full phase/benchmark matrix; inspect its configuration before starting a run.
 
-Runs phase0/1/2 for both LBP and mini-SWE:
+## Results and reports
 
-```bash
-./scripts/big_run.sh
-```
+Run directories include `summary.json` and `REPORT.md`. Regenerate reports from
+recorded outputs without starting a new evaluation:
 
-Use `--dry-run` on any script to validate configuration without API calls.
-
-## CLI Entry Points
-
-The package exposes these commands via `uv run`:
-
-- `ssl-phase0-lbp`
-- `ssl-phase0-msap`
-- `ssl-phase1-lbp`
-- `ssl-phase1-msap`
-- `ssl-phase2-lbp`
-- `ssl-phase2-msap`
-- `ssl-experiment-report`
-
-Example:
-
-```bash
-uv run ssl-phase0-lbp --dry-run
-```
-
-## Environment Variables
-
-Common:
-
-- `PRIME_API_KEY`: required unless `--dry-run`.
-- `ENV_FILE`: optional explicit dotenv path.
-- `REPO_DIR`: optional repo path used by shared dotenv loader.
-
-Common run knobs (also script flags):
-
-- `POLICY_MODEL`
-- `JUDGE_MODEL`
-- `DATASET_START_INDEX`
-- `NUM_EXAMPLES`
-- `ROLLOUTS`
-
-Mini-SWE:
-
-- `MSWE_DATASET` (defaults to `PrimeIntellect/SWE-Bench-Verified-Quick`)
-- `ALLOW_GIT` (for tool-level git operations in mini-SWE envs)
-
-Prime pod helpers:
-
-- `SPARSE_SIGNAL_LOOP_REPO`
-- `PRIME_POD_SKU`
-- `PRIME_API_BASE_URL`
-- `SSH_KEY_NAME`
-
-LBP RLM:
-
-- `LBP_RLM_CONTEXT_CACHE` (optional context cache path override)
-
-## Outputs and Reporting
-
-Run outputs are written under `outputs/` (for example `outputs/experiments/...` and `outputs/serious_runs/...`).
-
-Each run directory includes structured artifacts such as:
-
-- `summary.json`
-- `REPORT.md`
-
-Regenerate reports for a root directory:
-
-```bash
+```sh
 uv run ssl-experiment-report --root outputs/experiments
 ```
 
-Regenerate for a single run directory:
+For one run, pass `--run-dir` instead of `--root`.
+The retained [outputs](outputs/) and [research writeup](docs/BLOG.md) provide the
+context for interpreting measurements; a successful smoke run is not evidence
+of a benchmark improvement.
 
-```bash
-uv run ssl-experiment-report --run-dir outputs/experiments/<phase>/<dataset>/<timestamp>
+## Configuration
+
+Common run settings include `POLICY_MODEL`, `JUDGE_MODEL`,
+`DATASET_START_INDEX`, `NUM_EXAMPLES`, and `ROLLOUTS`. `ENV_FILE` selects an
+explicit dotenv file. Mini-SWE also uses `MSWE_DATASET` and `ALLOW_GIT`.
+
+The installed CLIs mirror the phase/benchmark pairs: `ssl-phase0-lbp`,
+`ssl-phase0-msap`, `ssl-phase1-lbp`, `ssl-phase1-msap`, `ssl-phase2-lbp`, and
+`ssl-phase2-msap`. Each accepts `--help`; for example:
+
+```sh
+uv run ssl-phase0-lbp --help
 ```
 
-## Prime Pod Workflow
+## Repository guide
 
-### 1) On your laptop
+| Location | Contents |
+| --- | --- |
+| [src/experiments/](src/experiments/) | Phase definitions, runners, and reporting |
+| [LongBench-Pro](src/envs/longbenchpro/README.md) · [RLM variant](src/envs/longbenchpro_rlm/README.md) | LongBench-Pro environments |
+| [Mini SWE Agent Plus](src/envs/mini_swe_agent_plus/README.md) · [RLM variant](src/envs/mini_swe_agent_plus_rlm/README.md) | Coding-agent environments |
+| [scripts/](scripts/) | Smoke runs, phase wrappers, and Prime pod helpers |
+| [docs/remote-runs.md](docs/remote-runs.md) | Optional remote-machine setup |
 
-Upload SSH key (one-time):
+## Development
 
-```bash
-./scripts/prime_ssh_key_upload.sh ~/.ssh/id_ed25519.pub
-prime config set-ssh-key-path ~/.ssh/id_ed25519
-```
-
-Create pod and connect:
-
-```bash
-# optional: export PRIME_POD_SKU=6ac679
-./scripts/prime_pod.sh create
-prime pods list
-prime pods ssh <pod-id>
-```
-
-### 2) On the pod
-
-Bootstrap repo and dependencies:
-
-```bash
-export SPARSE_SIGNAL_LOOP_REPO="https://github.com/<YOU>/sparse-signal-loop.git"
-./scripts/prime_pod.sh bootstrap
-cd ~/sparse-signal-loop
-```
-
-Run a smoke:
-
-```bash
-./scripts/smoke.sh
-```
-
-### 3) Cleanup
-
-```bash
-prime pods terminate <pod-id>
-```
-
-## Environment Package Docs
-
-- `src/envs/longbenchpro/README.md`
-- `src/envs/longbenchpro_rlm/README.md`
-- `src/envs/mini_swe_agent_plus/README.md`
-- `src/envs/mini_swe_agent_plus_rlm/README.md`
-
-## Linting
-
-Run lint checks:
-
-```bash
+```sh
 uv run ruff check .
 uv run ruff format --check .
 ```
-
