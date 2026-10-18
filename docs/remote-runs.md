@@ -21,7 +21,7 @@ prime pods ssh <pod-id>
 On the pod, bootstrap the repository and dependencies:
 
 ```sh
-export SPARSE_SIGNAL_LOOP_REPO="https://github.com/stochi0/sparse-signal-loop.git"
+export SPARSE_SIGNAL_LOOP_REPO="https://github.com/latentpaths/sparse-signal-loop.git"
 ./scripts/prime_pod.sh bootstrap
 cd ~/sparse-signal-loop
 ./scripts/smoke.sh --dry-run

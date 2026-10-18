@@ -22,7 +22,7 @@ their interpretation; this README describes how to operate the code.
 Use Python 3.11 or later and [uv](https://docs.astral.sh/uv/):
 
 ```sh
-git clone https://github.com/stochi0/sparse-signal-loop.git
+git clone https://github.com/latentpaths/sparse-signal-loop.git
 cd sparse-signal-loop
 uv sync --locked
 ```
