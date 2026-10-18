@@ -27,4 +27,3 @@ def build_env_args(cell: Phase2Cell, spec: Phase2MiniSweSpec) -> dict[str, Any]:
     base["phase2_skill_mode"] = _phase2_mode_for_arm(cell.arm)
     base["phase2_skill_max_chars"] = int(spec.phase2_skill_max_chars)
     return base
-

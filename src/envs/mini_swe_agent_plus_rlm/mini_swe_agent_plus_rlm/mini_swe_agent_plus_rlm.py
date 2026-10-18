@@ -42,17 +42,17 @@ from .mini_swe_judge_prompts import (
     JudgeFeedbackMode,
     swe_judge_prompt_for_mode,
 )
-from .utils.execution_log_parser import decolor_dict_keys, parse_log_fn
 from .utils.env_runtime import ENV_VARS, PATH
+from .utils.execution_log_parser import decolor_dict_keys, parse_log_fn
 from .utils.judge_helpers import judge_reference_from_row, msap_judge_verdict
 from .utils.prompts import (
     ACTION_OBSERVATION_TEMPLATE,
     PHASE1_MSWE_DEFAULT_ONLY_REPOS,
     REPL_PROMPT_TEMPLATE,
-    Phase2SkillMode,
     Phase1MemoryMode,
-    phase2_skill_suffix,
+    Phase2SkillMode,
     phase1_working_memory_suffix,
+    phase2_skill_suffix,
     render_template,
 )
 from .utils.sandbox_retry import is_retryable_sandbox_api_error, is_retryable_sandbox_read_error
@@ -1303,8 +1303,7 @@ def load_environment(
     split = "test" if "bench" in dataset_name.lower() else "train"
     if phase2_skill_mode not in ("off", "rlm_skill_file"):
         raise ValueError(
-            "mini_swe_agent_plus_rlm: phase2_skill_mode must be 'off' or 'rlm_skill_file'; "
-            f"got {phase2_skill_mode!r}"
+            f"mini_swe_agent_plus_rlm: phase2_skill_mode must be 'off' or 'rlm_skill_file'; got {phase2_skill_mode!r}"
         )
 
     if in_loop_judge and max_turns < 50:
