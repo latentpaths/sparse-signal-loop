@@ -51,4 +51,3 @@ async def run_phase2_mini_swe(
         evaluate_cell=evaluate_cell,
         completion_banner="Phase 2 (mini SWE) run directory",
     )
-

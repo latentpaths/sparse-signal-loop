@@ -138,10 +138,7 @@ def print_phase1_harness_contrast(rows: list[CellRunSummary]) -> None:
         return
 
     print("\n=== RLM vs chat (same judge feedback) ===")
-    print(
-        "Positive Δ = RLM ahead. 'best RLM' = max over RLM memory arms present; "
-        "'mean RLM' = mean over those arms.\n"
-    )
+    print("Positive Δ = RLM ahead. 'best RLM' = max over RLM memory arms present; 'mean RLM' = mean over those arms.\n")
     hdr = (
         f"{'feedback':<20} {'chat_JY':>9} {'rlm_mc':>9} {'rlm_rf':>9} "
         f"{'ΔJY_best':>10} {'ΔJY_mean':>10} {'chat_rw':>9} {'Δrw_best':>10} {'Δrw_mean':>10}"

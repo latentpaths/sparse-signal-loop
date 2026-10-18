@@ -221,9 +221,7 @@ def extract_phase2_skill_block(text: str) -> str | None:
     """Return inner text of the last ``<phase2_skill>...</phase2_skill>`` block, if any."""
     if not text:
         return None
-    matches = list(
-        re.finditer(r"<phase2_skill>\s*(.*?)\s*</phase2_skill>", text, flags=re.DOTALL | re.IGNORECASE)
-    )
+    matches = list(re.finditer(r"<phase2_skill>\s*(.*?)\s*</phase2_skill>", text, flags=re.DOTALL | re.IGNORECASE))
     if not matches:
         return None
     inner = matches[-1].group(1).strip()

@@ -42,8 +42,8 @@ from .mini_swe_judge_prompts import (
     JudgeFeedbackMode,
     swe_judge_prompt_for_mode,
 )
-from .utils.execution_log_parser import decolor_dict_keys, parse_log_fn
 from .utils.env_runtime import ENV_VARS_R2E, ENV_VARS_SWEBENCH
+from .utils.execution_log_parser import decolor_dict_keys, parse_log_fn
 from .utils.judge_helpers import judge_reference_from_row, msap_judge_verdict
 from .utils.prompts import (
     ACTION_OBSERVATION_TEMPLATE,
@@ -51,10 +51,10 @@ from .utils.prompts import (
     PHASE1_MSWE_DEFAULT_ONLY_REPOS,
     PROMPT_TEMPLATE,
     SYSTEM_PROMPT,
-    Phase2SkillMode,
     Phase1MemoryMode,
-    phase2_skill_suffix,
+    Phase2SkillMode,
     phase1_working_memory_suffix,
+    phase2_skill_suffix,
     render_template,
 )
 from .utils.sandbox_retry import (

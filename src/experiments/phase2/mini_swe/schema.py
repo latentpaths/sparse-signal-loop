@@ -12,4 +12,3 @@ class Phase2MiniSweSpec(MiniSweBaseSpec):
     phase1_slice: bool = True
     only_repos: list[str] | None = None
     phase2_skill_max_chars: int = 6000
-

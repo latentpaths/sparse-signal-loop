@@ -44,4 +44,3 @@ def build_eval_config(
         disable_env_server=False,
         independent_scoring=False,
     )
-

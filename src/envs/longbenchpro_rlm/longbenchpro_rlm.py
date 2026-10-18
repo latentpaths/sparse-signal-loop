@@ -80,7 +80,7 @@ def _env_tips_markup(*, include_strategy: bool) -> str:
     """RLM workspace note is always included; chunking strategy only when ``include_env_tips``."""
     lines = [
         "<env_tips>",
-        "**Where the long context lives (RLM):** The host directory in ``info[\"context_dir\"]`` is copied into your "
+        '**Where the long context lives (RLM):** The host directory in ``info["context_dir"]`` is copied into your '
         "REPL workspace. LongBench-Pro materializes ``context.txt`` (the passage). When ``prompt_in_context_file`` is "
         "True, ``task_query.txt`` holds the full written instructions (including these tips) because the root user "
         "message may be empty. The ``.messages`` file is chat JSONL (`role`, `content`, …); it is not the benchmark "
