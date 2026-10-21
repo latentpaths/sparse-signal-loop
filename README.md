@@ -1,3 +1,7 @@
+<p>
+  <a href="https://www.latentpaths.com/"><img src="https://raw.githubusercontent.com/latentpaths/.github/main/assets/latent-paths-wordmark.png" alt="Latent Paths" width="280"></a>
+</p>
+
 # Sparse Signal Loop
 
 Does feedback about one violated criterion help an LLM revise its answer, and
