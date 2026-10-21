@@ -6,10 +6,6 @@ This harness compares chat agents with recursive language model (RLM) agents
 using a Python workspace on LongBench-Pro and Mini SWE Agent Plus. The recorded comparisons do not establish a consistent
 advantage for the RLM harness under single-criterion feedback.
 
-- Source: [latentpaths/sparse-signal-loop](https://github.com/latentpaths/sparse-signal-loop)
-- Start: [Preview a run](#preview-a-run)
-- Check: [Run evaluations](#run-evaluations)
-
 [Experiments and findings](docs/BLOG.md) · [Recorded runs](outputs/) · [Remote setup](docs/remote-runs.md)
 
 ## Preview a run
