@@ -24,8 +24,14 @@ uv sync --locked
 ```
 
 The preview prints the three LongBench-Pro phase configurations without inference
-calls. It writes local logs under `outputs/smoke_logs/`. The four environment
-packages in `src/envs/` are installed as local editable dependencies.
+calls. It writes local logs under `outputs/smoke_logs/`. One root installation
+includes all four environments and the experiment CLIs; separate environment
+installs are no longer needed. The environment names and arguments are unchanged.
+
+[LongBench-Pro](src/longbenchpro/README.md) ·
+[RLM LongBench-Pro](src/longbenchpro_rlm/README.md) ·
+[Mini-SWE](src/mini_swe_agent_plus/README.md) ·
+[RLM Mini-SWE](src/mini_swe_agent_plus_rlm/README.md)
 
 ## What changes between conditions
 

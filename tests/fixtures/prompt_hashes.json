@@ -1,0 +1,703 @@
+{
+  "lbp_chat": [
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": false
+      },
+      "sha256": "52cc347b0bfa936ba220fe08b3b97781c61015abe66c325a4ec2419016fa32b3"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": false
+      },
+      "sha256": "fa8b2a13512063830584fc93b86b022de8ed9d40c0845257bb87d8bab0086fd6"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "0079978b89d799e6983a1196f24b65c76b194ba04e1e9675295c9e5aadb3b82b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "33b3f93d89381730c94866e023e2ba3770f39ff6369b95ef1fcac0ac4cb7438e"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "0f53974c76f59679b78a247422b8874c770f8e0c1b80c6026947795d91683b44"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": true
+      },
+      "sha256": "a6ac882dcb4401ae3b98798588a967a32738108686f7b96c16e5a6138583756a"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": true
+      },
+      "sha256": "2c3927f4438bf7f8fc284cd731782ec1df1d8d62f61ba79d75bdbd8754ae27f5"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "0a355484c89f24ee5d92f3f3b72a76f3c9c0481c28f34844fa2103746b6030da"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "1790970ada41fa802c1259384fc584e5e54f47f70c981902a24c6f25a6275700"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "94bc3b02f2d144c48dd2269e1d16cee8464049ecb38ff5777c565f0f8f04ed4b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "build_phase2_skill_md_template",
+      "kwargs": {
+        "max_chars": 1234
+      },
+      "sha256": "1d67cd35af3de35cb17409dff0abe4b643ddcc86346bddcdc6acdd57bfabc957"
+    },
+    {
+      "function": "extract_phase2_skill_block",
+      "kwargs": {
+        "text": "<phase2_skill>first</phase2_skill>\n<phase2_skill> last </phase2_skill>"
+      },
+      "sha256": "58c9f0356eee1e856d315d8c30b22f416ff59be0d4c3f7c0087f3a8c386bdce0"
+    },
+    {
+      "function": "lbp_judge_prompt_for_mode",
+      "kwargs": {
+        "mode": "total_score"
+      },
+      "sha256": "d84738d15d886e56d27ac6ddd39f3b3ff5b75b50b7fac367247b3694350ce0dd"
+    },
+    {
+      "function": "lbp_judge_prompt_for_mode",
+      "kwargs": {
+        "mode": "single_criterion"
+      },
+      "sha256": "ccb8924c31ec2787cc07cb2078f1445ee775f6d1f92a05ce479de008480e4f1f"
+    }
+  ],
+  "lbp_rlm": [
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": false
+      },
+      "sha256": "52cc347b0bfa936ba220fe08b3b97781c61015abe66c325a4ec2419016fa32b3"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": false
+      },
+      "sha256": "fa8b2a13512063830584fc93b86b022de8ed9d40c0845257bb87d8bab0086fd6"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "0079978b89d799e6983a1196f24b65c76b194ba04e1e9675295c9e5aadb3b82b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "33b3f93d89381730c94866e023e2ba3770f39ff6369b95ef1fcac0ac4cb7438e"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "0f53974c76f59679b78a247422b8874c770f8e0c1b80c6026947795d91683b44"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": true
+      },
+      "sha256": "a6ac882dcb4401ae3b98798588a967a32738108686f7b96c16e5a6138583756a"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": true
+      },
+      "sha256": "2c3927f4438bf7f8fc284cd731782ec1df1d8d62f61ba79d75bdbd8754ae27f5"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "0a355484c89f24ee5d92f3f3b72a76f3c9c0481c28f34844fa2103746b6030da"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "1790970ada41fa802c1259384fc584e5e54f47f70c981902a24c6f25a6275700"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "94bc3b02f2d144c48dd2269e1d16cee8464049ecb38ff5777c565f0f8f04ed4b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "build_phase2_skill_md_template",
+      "kwargs": {
+        "max_chars": 1234
+      },
+      "sha256": "1d67cd35af3de35cb17409dff0abe4b643ddcc86346bddcdc6acdd57bfabc957"
+    },
+    {
+      "function": "lbp_judge_prompt_for_mode",
+      "kwargs": {
+        "mode": "total_score"
+      },
+      "sha256": "d84738d15d886e56d27ac6ddd39f3b3ff5b75b50b7fac367247b3694350ce0dd"
+    },
+    {
+      "function": "lbp_judge_prompt_for_mode",
+      "kwargs": {
+        "mode": "single_criterion"
+      },
+      "sha256": "ccb8924c31ec2787cc07cb2078f1445ee775f6d1f92a05ce479de008480e4f1f"
+    }
+  ],
+  "swe_chat": [
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": false
+      },
+      "sha256": "db312045646988ebee3dfd672f0d1b5765ac221eb36c4ab8143a7e8c034703aa"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": false
+      },
+      "sha256": "2f442a952f7fcca1b5c5cdf41765d4524d06bf9548061107296268d202fa0193"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "b32136dc6b094ed426e3a1e726d33798d877ba381ba0272dbe4e637749a44990"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "b59ca4327698d202e71075462ad670dff306f64360aefba38517cee79c8a3f86"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7b0a59be596d062186a03df6c04adcf6d21e124194e64a757238344171fbfd2a"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": true
+      },
+      "sha256": "20a63d4962e13c2d8032a1f4b398e91b1c01c035686d4ddbf65d6d504a866415"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": true
+      },
+      "sha256": "1ca5be8d2c7f3a046282bc4ba29df7e8398b373a9b2296e141cdbe92645ffdab"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "e75d0c1442e395fe5d6c8c51bf3446f920cadb63a4183de04bcbeb1941519c4e"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "1790970ada41fa802c1259384fc584e5e54f47f70c981902a24c6f25a6275700"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "94bc3b02f2d144c48dd2269e1d16cee8464049ecb38ff5777c565f0f8f04ed4b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "build_phase2_skill_md_template",
+      "kwargs": {
+        "max_chars": 1234
+      },
+      "sha256": "dc384a8d85e505109c850ca8a362f4140d20f1bdfbea922e1013d8391f97c12c"
+    },
+    {
+      "function": "extract_phase2_skill_block",
+      "kwargs": {
+        "text": "<phase2_skill>first</phase2_skill>\n<phase2_skill> last </phase2_skill>"
+      },
+      "sha256": "58c9f0356eee1e856d315d8c30b22f416ff59be0d4c3f7c0087f3a8c386bdce0"
+    }
+  ],
+  "swe_rlm": [
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": false
+      },
+      "sha256": "db312045646988ebee3dfd672f0d1b5765ac221eb36c4ab8143a7e8c034703aa"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": false
+      },
+      "sha256": "2f442a952f7fcca1b5c5cdf41765d4524d06bf9548061107296268d202fa0193"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "b32136dc6b094ed426e3a1e726d33798d877ba381ba0272dbe4e637749a44990"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "b59ca4327698d202e71075462ad670dff306f64360aefba38517cee79c8a3f86"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7b0a59be596d062186a03df6c04adcf6d21e124194e64a757238344171fbfd2a"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": false,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "chat",
+        "rlm": true
+      },
+      "sha256": "20a63d4962e13c2d8032a1f4b398e91b1c01c035686d4ddbf65d6d504a866415"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "repl_files",
+        "rlm": true
+      },
+      "sha256": "1ca5be8d2c7f3a046282bc4ba29df7e8398b373a9b2296e141cdbe92645ffdab"
+    },
+    {
+      "function": "phase1_working_memory_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true
+      },
+      "sha256": "152ff7794d54f4266e1e4b247080d92a7bebd098dcb3be862f155b98760ecb36"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "off",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "465df9ded5996ddee4388640177eac612f002602bf29aa0068d3a29741c55086"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "rlm_skill_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "9feb65eb154a3c4e34363022d095bc9ac0d08478c70e49954beec08a81a689b4"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_no_file",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "1790970ada41fa802c1259384fc584e5e54f47f70c981902a24c6f25a6275700"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "chat_system_reinject",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "94bc3b02f2d144c48dd2269e1d16cee8464049ecb38ff5777c565f0f8f04ed4b"
+    },
+    {
+      "function": "phase2_skill_suffix",
+      "kwargs": {
+        "mode": "invalid",
+        "rlm": true,
+        "max_chars": 1234
+      },
+      "sha256": "7e1b924f4873febecde87e05afedd655ba37a026a62fbfa32d8287f99a3a049f"
+    },
+    {
+      "function": "build_phase2_skill_md_template",
+      "kwargs": {
+        "max_chars": 1234
+      },
+      "sha256": "9dbee6cfa9d6f7d4332578b6e637e13a2bd93e14d52c1438eaafec9de574efee"
+    },
+    {
+      "function": "extract_phase2_skill_block",
+      "kwargs": {
+        "text": "<phase2_skill>first</phase2_skill>\n<phase2_skill> last </phase2_skill>"
+      },
+      "sha256": "58c9f0356eee1e856d315d8c30b22f416ff59be0d4c3f7c0087f3a8c386bdce0"
+    }
+  ]
+}

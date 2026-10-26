@@ -58,6 +58,13 @@ uv run ssl-phase0-lbp --help
 ## Development
 
 ```sh
-uv run ruff check .
-uv run ruff format --check .
+uv sync --locked --group dev
+uv run --locked python -m unittest discover -s tests -v
+uv run --locked ruff check src tests
+uv run --locked ruff format --check src tests
+uv build --wheel
 ```
+
+The root wheel includes all four `load_environment` entry points and the shared
+sandbox scripts. The offline tests compare prompts with pre-consolidation hashes
+and exercise metrics, dataset selection, log parsing and packaged resources.

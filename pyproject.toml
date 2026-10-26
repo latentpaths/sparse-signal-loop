@@ -3,7 +3,7 @@ requires = ["hatchling>=1.23"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/experiments"]
+packages = ["src/experiments", "src/sparse_signal_loop", "src/longbenchpro", "src/longbenchpro_rlm", "src/mini_swe_agent_plus", "src/mini_swe_agent_plus_rlm"]
 
 [project]
 name = "sparse-signal-loop"
@@ -15,10 +15,6 @@ dependencies = [
     "datasets",
     "httpx",
     "jinja2",
-    "longbenchpro",
-    "longbenchpro-rlm",
-    "mini-swe-agent-plus",
-    "mini-swe-agent-plus-rlm",
     "numpy",
     "prime-sandboxes>=0.2.13",
     "pytrec-eval-terrier",
@@ -27,12 +23,6 @@ dependencies = [
     "tenacity",
     "verifiers>=0.1.12.dev1",
 ]
-
-[tool.uv.sources]
-longbenchpro = { path = "src/envs/longbenchpro", editable = true }
-longbenchpro-rlm = { path = "src/envs/longbenchpro_rlm", editable = true }
-mini-swe-agent-plus = { path = "src/envs/mini_swe_agent_plus", editable = true }
-mini-swe-agent-plus-rlm = { path = "src/envs/mini_swe_agent_plus_rlm", editable = true }
 
 [project.scripts]
 ssl-phase0-lbp = "experiments.phase0.lbp.cli:main"

@@ -16,10 +16,10 @@ reasoning strategy. Model weights stay fixed.
 Phase 0 crosses harness type with total-score or single-criterion feedback.
 Phase 1 adds conversation memory and REPL-file memory conditions. Phase 2 adds
 carried `SKILL.md` content and chat controls with or without system reinjection.
-The environment READMEs define the [LongBench-Pro](../src/envs/longbenchpro/README.md),
-[RLM LongBench-Pro](../src/envs/longbenchpro_rlm/README.md),
-[Mini-SWE](../src/envs/mini_swe_agent_plus/README.md), and
-[RLM Mini-SWE](../src/envs/mini_swe_agent_plus_rlm/README.md) implementations.
+The environment READMEs define the [LongBench-Pro](../src/longbenchpro/README.md),
+[RLM LongBench-Pro](../src/longbenchpro_rlm/README.md),
+[Mini-SWE](../src/mini_swe_agent_plus/README.md), and
+[RLM Mini-SWE](../src/mini_swe_agent_plus_rlm/README.md) implementations.
 
 ## Reading the measurements
 
