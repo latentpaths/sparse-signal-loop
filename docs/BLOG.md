@@ -153,5 +153,5 @@ and judge, complete paired conditions, declared treatment of errors, uncertainty
 that accounts for repeated examples, and an explicit comparison of inference
 budgets. That is a proposed evaluation, not a result of these records.
 
-See [running and reporting](running.md) to inspect configurations and regenerate
+See [running and reporting](../README.md#results-and-reports) to inspect configurations and regenerate
 reports on copies without starting new inference runs.
