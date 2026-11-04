@@ -158,5 +158,3 @@ uv build --wheel
 The root wheel includes all four `load_environment` entry points and the shared
 sandbox scripts. The offline tests compare prompts with pre-consolidation hashes
 and exercise metrics, dataset selection, log parsing and packaged resources.
-
-[Citation guide](CITATION.md) · [BibTeX](CITATION.bib)
