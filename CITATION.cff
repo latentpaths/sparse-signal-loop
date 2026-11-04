@@ -1,0 +1,28 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Please cite this software when referring to this implementation. Specify the commit used; cite upstream research separately.",
+  "type": "software",
+  "title": "Sparse Signal Loop",
+  "authors": [
+    {
+      "family-names": "Bodade",
+      "given-names": "Ayush"
+    }
+  ],
+  "repository-code": "https://github.com/latentpaths/sparse-signal-loop",
+  "url": "https://github.com/latentpaths/sparse-signal-loop",
+  "references": [
+    {
+      "type": "blog",
+      "title": "Sparse Signal Loop",
+      "authors": [
+        {
+          "family-names": "Bodade",
+          "given-names": "Ayush"
+        }
+      ],
+      "url": "https://www.latentpaths.com/writings/sparse-signal-loop",
+      "date-published": "2026-04-11"
+    }
+  ]
+}
