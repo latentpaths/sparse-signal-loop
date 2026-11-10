@@ -165,8 +165,6 @@ and exercise metrics, dataset selection, log parsing and packaged resources.
 
 Citation metadata matches the [ORCID record](https://orcid.org/0009-0007-2252-8905). [Complete bibliography](https://www.latentpaths.com/citations/all.bib).
 
-### Writing
-
 ```bibtex
 @misc{bodadearticlesparsesignalloop,
   author = {Bodade, Ayush},
@@ -182,18 +180,5 @@ Citation metadata matches the [ORCID record](https://orcid.org/0009-0007-2252-89
 ```
 
 [Citation file](https://www.latentpaths.com/citations/article/sparse-signal-loop.bib) · [Work](https://www.latentpaths.com/writings/sparse-signal-loop)
-
-### Software
-
-```bibtex
-@software{bodadeprojectsparsesignalloop,
-  author = {Bodade, Ayush},
-  title = {{Sparse Signal Loop}},
-  url = {https://github.com/latentpaths/sparse-signal-loop},
-  note = {Research software. Specify the commit or version used.}
-}
-```
-
-[Citation file](https://www.latentpaths.com/citations/project/sparse-signal-loop.bib) · [Work](https://github.com/latentpaths/sparse-signal-loop)
 
 <!-- END generated citations -->
