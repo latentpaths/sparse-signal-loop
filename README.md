@@ -6,7 +6,7 @@ This harness compares chat agents with recursive language model (RLM) agents
 using a Python workspace on LongBench-Pro and Mini SWE Agent Plus. The recorded comparisons do not establish a consistent
 advantage for the RLM harness under single-criterion feedback.
 
-[Experiments and findings](docs/BLOG.md) · [Recorded runs](outputs/) · [Run guide](docs/running.md)
+[Blog](docs/BLOG.md) · [Runs](outputs/) · [Running](docs/running.md)
 
 ## Preview a run
 
@@ -36,7 +36,7 @@ calls. It writes local logs under `outputs/smoke_logs/`. The root installation i
 | 2 | Carried `SKILL.md` files and chat reinjection controls |
 
 Judge acceptance, environment reward, and task scores are separate measurements.
-The [research account](docs/BLOG.md) defines them, links the underlying reports,
+The [Blog](docs/BLOG.md) defines them, links the underlying reports,
 and reports recorded rollout counts, errors, and incomplete conditions.
 Turn budgets and model settings differ across some conditions and phases.
 
@@ -46,8 +46,8 @@ Real evaluations consume inference and sandbox credits. Set `PRIME_API_KEY` in
 your shell or local `.env`, then run `./scripts/smoke.sh`. Use `--dry-run` first.
 Keep new runs separate from retained `outputs/` evidence.
 
-See the [run guide](docs/running.md) for individual phases, configuration,
-report regeneration, and remote compute. The [research account](docs/BLOG.md)
+See the [Running](docs/running.md) for individual phases, configuration,
+report regeneration, and remote compute. The [Blog](docs/BLOG.md)
 explains the recorded comparisons and incomplete conditions.
 
 ## Development
